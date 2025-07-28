@@ -3,21 +3,68 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
+.heroSection {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 5rem 1rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.productLogo {
+  width: 80%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  background-color: #00C3BE;
+  color: #0f172a;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 98, 95, 0.3);
+}
+
+.ctaButton:hover {
+  box-shadow: 0 4px 14px rgba(0, 195, 189, 0.3);
+  background-color: #80e1de;
+}
+
+.screenshotWrapper {
+  margin-top: 3rem;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
 }
