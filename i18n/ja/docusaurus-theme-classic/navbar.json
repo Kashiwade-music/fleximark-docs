@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "FlexiMark",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "FlexiMark Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Tutorial": {
+    "message": "Tutorial",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.How To Guide": {
+    "message": "How To Guide",
+    "description": "Navbar item with label How To Guide"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

@@ -25,7 +25,7 @@ function HomepageHeader() {
         </Link>
         <div className={styles.screenshotWrapper}>
           <img
-            src="img/vscodium.png"
+            src="img/demo_vscode_preview.avif"
             alt="Product Screenshot"
             className={styles.screenshot}
           />

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
+import Translate, { translate } from "@docusaurus/Translate";
 import Heading from "@theme/Heading";
 import clsx from "clsx";
 import React from "react";
@@ -14,33 +15,37 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Easy to Use",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    title: translate({ message: "Flexible Category Management" }),
+    Svg: require("@site/static/img/sitemap-solid.svg").default,
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
+      <Translate>
+        Organize notes hierarchically by category or folder. Create and edit
+        them intuitively—attached images are automatically sorted in the same
+        structure.
+      </Translate>
     ),
   },
   {
-    title: "Focus on What Matters",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    title: translate({ message: "Extensible Preview Features" }),
+    Svg: require("@site/static/img/palette-solid.svg").default,
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
+      <Translate>
+        Supports real-time previews in VSCode and browsers. Rich syntax
+        extensions like GFM, Mermaid, ABC notation, Admonition, and tab views
+        are supported. You can also add custom syntax and fully tailor the
+        design.
+      </Translate>
     ),
   },
   {
-    title: "Powered by React",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    title: translate({ message: "Powerful Tools for Organizing Notes" }),
+    Svg: require("@site/static/img/tools-solid.svg").default,
     description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
+      <Translate>
+        Features like HTML export and automatic sticky note extraction make
+        daily organization easier. Creating summary notes for key information is
+        simple too.
+      </Translate>
     ),
   },
 ];
