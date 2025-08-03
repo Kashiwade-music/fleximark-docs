@@ -81,15 +81,15 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "documentsSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Docs",
         },
         {
           type: "docSidebar",
           sidebarId: "howToGuideSidebar",
           position: "left",
-          label: "How To Guide",
+          label: "Dev Guide",
         },
         {
           type: "localeDropdown",

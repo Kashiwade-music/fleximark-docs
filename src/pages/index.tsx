@@ -1,7 +1,6 @@
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 import React from "react";
@@ -10,8 +9,6 @@ import type { ReactNode } from "react";
 import styles from "./index.module.css";
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-
   return (
     <header className={clsx(styles.heroSection)}>
       <div className={styles.heroContent}>
@@ -20,7 +17,7 @@ function HomepageHeader() {
           alt="Product Logo"
           className={styles.productLogo}
         />
-        <Link className={styles.ctaButton} to="/docs/intro">
+        <Link className={styles.ctaButton} to="/docs/documents/intro">
           Get Started
         </Link>
         <div className={styles.screenshotWrapper}>
