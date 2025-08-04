@@ -12,7 +12,7 @@ FlexiMarkは[Markdownの文法（基本）](./basic-markdown-syntax.md)で扱っ
 
 ## 付箋（Admonition/Alert）記法
 
-[DocusaurusのAdmonitions](https://docusaurus.io/docs/markdown-features/admonitions) や [GitHubのAlert](https://docs.github.com/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) に相当する機能です。ブロック内では各種Markdownの記法を使うことができます。また、後述する[「付箋（Admonition/Alert）収集機能」](../feature/collect-admonitions.md)を用いることで、指定カテゴリ以下の全てのノートに存在する付箋（Admonition/Alert）を単一のMarkdownに収集して整理することもできます。
+[DocusaurusのAdmonitions](https://docusaurus.io/docs/markdown-features/admonitions) や [GitHubのAlert](https://docs.github.com/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) に相当する機能です。ブロック内では各種Markdownの記法を使うことができます。また、後述する[「付箋（Admonition/Alert）の収集」](../feature/collect-admonitions.md)を用いることで、指定カテゴリ以下の全てのノートに存在する付箋（Admonition/Alert）を単一のMarkdownに収集して整理することもできます。
 
 ```plaintext
 :::info
