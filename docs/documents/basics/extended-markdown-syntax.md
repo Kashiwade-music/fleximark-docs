@@ -251,3 +251,9 @@ F,2A,2C2 | F,2C2A2 | B,2D2F2- | FAFEB,2 :|
 ````
 
 ![](img/extended-markdown-syntax/08_abc.png)
+
+ABCのコードブロック内でバックスラッシュ（`\`）を入力することで、ABC記譜法のスニペットが表示されます。
+![](img/extended-markdown-syntax/09_abc_snippet.png)
+
+また、ABCのコードブロック内でエクスクラメーションマーク（`!`）を入力することで、各種記号のスニペットが表示されます。
+![](img/extended-markdown-syntax/10_abc_mark.png)
