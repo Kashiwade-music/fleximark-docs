@@ -26,7 +26,7 @@ Workspace CSSは、Global CSSを上書きします。これにより、一部の
 FlexiMark: Open Workspace CSS
 ```
 
-![](img/css/00_command_parrete_global.png)
+![](img/css/00_command_global.png)
 
 この操作により、Global CSSがプレビューされます。このファイルを編集することで、スタイルを変更できます。
 
@@ -40,7 +40,7 @@ FlexiMark: Open Workspace CSS
 FlexiMark: Open Global CSS
 ```
 
-![](img/css/02_command_parrete_workspace.png)
+![](img/css/02_command_workspace.png)
 
 この操作により、ワークスペース内に `.fleximark/fleximark.css` というファイルが作成されます。
 ![](img/css/03_gen_workspace_css.png)
