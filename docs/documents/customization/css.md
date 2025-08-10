@@ -10,22 +10,41 @@ FlexiMarkでは、プレビュー画面のスタイルを自由にカスタマ�
 
 プレビュー時の見た目は、以下の3種類のCSSによって決まります。
 
-1. グローバルCSS
-2. ワークスペースCSS
+1. Global CSS
+2. Workspace CSS
 3. Markdownファイル内の`<style>`タグ
 
-ワークスペースCSSは、グローバルCSSを上書きします。これにより、一部のスタイルだけを変更することも可能です。
+Workspace CSSは、Global CSSを上書きします。これにより、一部のスタイルだけを変更することも可能です。
 
 ## 変更方法
 
+### Global CSS
+
 `F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+
 ```plaintext
-FlexiMark: Generate Workspace CSS
+FlexiMark: Open Workspace CSS
 ```
-![](img/css/00_command_parette.png)
+
+![](img/css/00_command_parrete_global.png)
+
+この操作により、Global CSSがプレビューされます。このファイルを編集することで、スタイルを変更できます。
+
+![](img/css/00_gen_global_css.png)
+
+### Workspace CSS
+
+`F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+
+```plaintext
+FlexiMark: Open Global CSS
+```
+
+![](img/css/01_command_parrete_workspace.png)
 
 この操作により、ワークスペース内に `.fleximark/fleximark.css` というファイルが作成されます。
-![](img/css/01_gen_workspace_css.png)
+![](img/css/02_gen_workspace_css.png)
+
 
 このファイルを編集することで、スタイルを変更できます。たとえば、見出しの文字色を赤にしたい場合は、以下のように記述します。
 
@@ -33,7 +52,7 @@ FlexiMark: Generate Workspace CSS
 /* 
  * This file is used to override default styles.
  * Default styles are located at:
- * c:\Users\ryo\AppData\Roaming\Code\User\globalStorage\kashiwade.fleximark\fleximark.css
+ * c:\Users\   \AppData\Roaming\Code\User\globalStorage\kashiwade.fleximark\fleximark.css
  * 
  * Please edit this file to customize fleximark appearance.
  */
@@ -50,7 +69,7 @@ FlexiMark: Generate Workspace CSS
 
 この設定を保存した後、任意のMarkdownファイルを開くと、見出しが赤く表示されるようになります。
 
-![](img/css/02_css_change_example.png)
+![](img/css/03_css_change_example.png)
 
 :::tip
 
@@ -62,7 +81,7 @@ FlexiMarkのプレビューでは、すべてのHTML要素が `<div class="markd
 
 CSSの変更をプレビューに反映させるには、プレビュー画面を更新する必要があります。
 
-以下のいずれかの方法で更新してください：
+プレビュー画面を閉じてもう一度開くか、以下の方法で更新してください：
 
 - **ブラウザの場合**：リロードボタンをクリック
 - **VSCodeの場合**：他のテキストエディタタブ（プレビュー画面を除く）に一度切り替えた後、元のテキストエディタタブに戻る
