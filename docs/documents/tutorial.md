@@ -29,9 +29,9 @@ Markdownの記述をより便利にするために、いくつかのおすすめ
 適当なMarkdownファイルを開いてください。FlexiMarkが正しくインストールされていれば、タブの右端にアイコンが表示されます。
 そのアイコンをクリックすることでプレビューが開きます。
 
-![](img/00_preview-icon.png)
+![](img/tutorial/00_preview-icon.png)
 
-![](img/01_preview-icon-click-result.png)
+![](img/tutorial/01_preview-icon-click-result.png)
 
 FlexiMarkはMarkdownのプレビュー機能は、後述するFlexiMark Workspaceの外でも使用することができます。
 
@@ -43,10 +43,10 @@ FlexiMark専用のディレクトリを作成し、FlexiMark Workspaceとして�
 ```plaintext
 FlexiMark: Initialize Workspace as Note Taking Directory
 ```
-![](img/02_prompt_initialize_command.png)
+![](img/tutorial/02_prompt_initialize_command.png)
 
 すると下記のような画面になります。エディタにはコメント付きの`.vscode/settings.json`が表示されています。このコメントはFlexiMarkの各設定項目の説明を記しています。
-![](img/03_workspace_initialized.png)
+![](img/tutorial/03_workspace_initialized.png)
 
 まずはノートのカテゴリをカスタマイズしてみましょう。`.vscode/settings.json`の下記の部分をお好みに修正してください。日本語などの2バイト文字も可能です。
 
@@ -77,23 +77,23 @@ FlexiMark: Initialize Workspace as Note Taking Directory
 ```plaintext
 FlexiMark: Create New Note
 ```
-![](img/04_create_first_note.png)
+![](img/tutorial/04_create_first_note.png)
 
 すると、先ほど設定したカテゴリ構造に基づいてカテゴリを選択するダイアログが表示されます。矢印キーで選択して`Enter`キーを押すと、その子カテゴリの選択に移ります。末端の子カテゴリの選択が完了するまで、このカテゴリ選択は続きます。途中のカテゴリで選択を終了したい場合は、ダイアログ一番下の項目を選択します。
 
-![](img/05_choose_category.png)
+![](img/tutorial/05_choose_category.png)
 
 続いて、Markdownノートのテンプレートの選択に移ります。既定では2つのサンプルを用意しています。このテンプレートは`.vscode/settings.json`で変更可能です。まずは`default`を選んで`Enter`キーを押してください。
-![](img/06_choose_template.png)
+![](img/tutorial/06_choose_template.png)
 
 最後に、Markdownノートのファイル名を入力します。最終的なファイル名は、`.vscode/settings.json`に設定されている接頭辞(prefix)と接尾辞(suffix)が付与されて、`{{prefix}}{{YOUR FILE NAME}}{{suffix}}.md`となります。
-![](img/07_input_filename.png)
+![](img/tutorial/07_input_filename.png)
 
 ノートが作成されました！
 1. 指定したカテゴリ階層にノートが作成されていることを確認してください。
 2. `first tabstop`の部分に任意の文字を入力したら、`Tab`キーを押すことでカーソルが`second tabstep`に移動します。
 
-![](img/08_note_created.png)
+![](img/tutorial/08_note_created.png)
 
 :::info
 
