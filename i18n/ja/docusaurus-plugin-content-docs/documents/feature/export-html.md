@@ -10,9 +10,9 @@ HTMLとして出力したいノートを開いた状態で`F1`キーを押下し
 FlexiMark: Export as HTML
 ```
 
-![](img/export-html/00_command.png)
+![](img/export-html/00_command.webp)
 
 処理が完了すると、ノートと同じ場所にノート名と同じ名前のフォルダが作成されます。\
 このフォルダには、変換後のHTMLファイルと、ノートで使用しているすべてのアセットが含まれています。HTMLファイルは相対パスでアセットを参照しているため、フォルダごと移動しても正しく表示できます。
 
-![](img/export-html/01_result.png)
+![](img/export-html/01_result.webp)
