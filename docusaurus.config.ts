@@ -110,15 +110,15 @@ const config: Config = {
             },
             {
               label: "Basic Usage",
-              to: "/docs/documents/basic-usage",
+              to: "/docs/category/basic-usage",
             },
             {
               label: "Feature",
-              to: "/docs/documents/feature",
+              to: "/docs/category/feature",
             },
             {
               label: "Customization",
-              to: "/docs/documents/customization",
+              to: "/docs/category/customization",
             },
             {
               label: "Troubleshooting",
