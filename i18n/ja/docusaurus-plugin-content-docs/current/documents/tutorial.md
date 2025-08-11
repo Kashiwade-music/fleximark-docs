@@ -95,12 +95,6 @@ FlexiMark: Create New Note
 
 ![](img/tutorial/08_note_created.webp)
 
-:::info
-
-この状態で、先ほどと同じく右側のプレビューボタンを押すと、ブラウザでプレビューが開きます。この設定は`.vscode/settings.json`で変更可能です。
-
-:::
-
 ## 次のステップ
 
 以上でFlexiMarkの初回セットアップは終了です。続いて [Basic Usage](/docs/category/basic-usage) で基本的な使い方を紹介します。

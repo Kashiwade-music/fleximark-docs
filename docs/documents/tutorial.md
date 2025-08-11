@@ -107,13 +107,6 @@ Your note has been created!
 
 ![](img/tutorial/08_note_created.webp)
 
-:::info
-
-At this point, clicking the preview button on the right side—just like before—will open the preview in your browser.  
-This behavior can be customized in `.vscode/settings.json`.
-
-:::
-
 ## Next Steps
 
 That’s it for the initial FlexiMark setup!  

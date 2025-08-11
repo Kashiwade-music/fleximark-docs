@@ -1,6 +1,6 @@
 # Collecting Admonitions/Alerts
 
-This feature automatically extracts all notes and remarks written using the [Admonition/Alert syntax](../basics/extended-markdown-syntax.md#付箋admonitionalert記法) from every note under a specified category, and compiles them into a single Markdown file. This allows you to organize and view important information scattered across multiple notes by category.
+This feature automatically extracts all notes and remarks written using the [Admonition/Alert syntax](../basics/extended-markdown-syntax.md#admonitionalert-syntax) from every note under a specified category, and compiles them into a single Markdown file. This allows you to organize and view important information scattered across multiple notes by category.
 
 For example, if you have several study notes under a "Mathematics" category, and each note includes sticky notes recording your stumbling points using the Admonition format, you can extract just those notes and reuse them as a "Collection of Stumbling Points in Mathematics." This is useful for review and revisiting information.
 
