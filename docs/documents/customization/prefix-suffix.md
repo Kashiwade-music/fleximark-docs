@@ -6,7 +6,7 @@ sidebar_position: 2
 
 When creating notes with FlexiMark, you can add custom strings to the beginning and end of the file name. Both fixed text and certain placeholders are supported.
 
-## How to Modify
+## How to Change
 
 Open `.vscode/settings.json` and edit the relevant part as shown below. The final file name will follow this format: `{{noteFileNamePrefix}}{{YOUR FILE NAME}}{{noteFileNameSuffix}}.md`  
 Below is the default setting, which results in a file name like `20250804_Hello World.md`.

@@ -162,7 +162,7 @@ The above example, when converted to HAST, would look like:
 
 :::
 
-## How to Modify
+## How to Change
 
 ### Global Parser
 

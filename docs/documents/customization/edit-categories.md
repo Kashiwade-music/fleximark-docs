@@ -6,7 +6,7 @@ sidebar_position: 1
 
 FlexiMark organizes notes in a hierarchical category structure. This hierarchy can be edited in the `.vscode/settings.json` file of your FlexiMark Workspace.
 
-## How to Modify
+## How to Change
 
 Open `.vscode/settings.json` and edit the relevant section as shown below. You can use multibyte characters such as Japanese.\
 A category without subcategories can be written like `"Life": {}`.

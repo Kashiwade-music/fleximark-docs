@@ -19,7 +19,7 @@ flowchart TD
     B -->|No| E[【In VSCode】<br>JS is not executed,<br>iframe is not supported.]
 ```
 
-## How to Change the Setting
+## How to Change
 
 Open `.vscode/settings.json` and edit the following section. Available values are `vscode` or `browser`. Below is the default setting:
 
