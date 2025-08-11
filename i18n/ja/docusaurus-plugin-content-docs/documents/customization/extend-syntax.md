@@ -354,7 +354,7 @@ block content
 ::::
 
 TextDirectiveを使ったサンプルを作ってみましょう。このDirectiveは`:highlight[content]{color=red}`とすることで、文字の色を自由に設定できます。\
-下記のように`parserPlugin.js`を編集してください。HTML要素の設定は`data.hName`や`data.Properties`で設定できます。
+下記のように`parserPlugin.js`を編集してください。HTML要素の設定は`data.hName`や`data.hProperties`で設定できます。
 
 ```javascript title="parserPlugin.js" {6-16,26-47}
 module.exports = {

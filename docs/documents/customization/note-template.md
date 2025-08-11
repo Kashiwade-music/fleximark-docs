@@ -2,13 +2,13 @@
 sidebar_position: 3
 ---
 
-# テンプレート
+# Template
 
-ノートを作成する際のテンプレートを設定することができます。
+You can configure a template to use when creating notes.
 
-## 変更方法
+## How to Change
 
-`.vscode/settings.json`を開き、下記の部分を修正してください。下記はデフォルトの設定です。
+Open `.vscode/settings.json` and modify the relevant section as shown below. This is the default configuration:
 ```json title=".vscode/settings.json" {3-11} 
 {
   ...
@@ -25,8 +25,8 @@ sidebar_position: 3
 }
 ```
 
-テンプレートの1行を、1つの配列の要素として記述してください。
-例えば下記のようなテンプレートを用意したい場合は次のように記述します。
+Each line of the template should be written as an element in the array.
+For example, if you want a template like the one below:
 
 ```plaintext
 # Title
@@ -34,6 +34,8 @@ sidebar_position: 3
 ## Heading 2
 
 ```
+
+You should write it like this:
 
 ```json title=".vscode/settings.json"
 {
@@ -50,6 +52,6 @@ sidebar_position: 3
 }
 ```
 
-VSCodeの機能により、プレースホルダやタブストップを設定することができます。使うことのできる文法は下記のページを参照してください。
+VSCode allows you to use placeholders and tab stops. For more details on the available syntax, please refer to the following page:
 
 https://code.visualstudio.com/docs/editing/userdefinedsnippets#_snippet-syntax

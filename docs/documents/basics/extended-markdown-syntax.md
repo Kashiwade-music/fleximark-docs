@@ -2,17 +2,17 @@
 sidebar_position: 2
 ---
 
-# Markdownの文法（拡張）
+# Extended Markdown Syntax
 
-FlexiMarkがサポートするMarkdownの拡張文法を紹介します。
+Introducing the extended Markdown syntax supported by FlexiMark.
 
-## 概要
+## Overview
 
-FlexiMarkは[Markdownの文法（基本）](./basic-markdown-syntax.md)で扱ったものに加えて、独自の拡張記法をサポートしています。これらの記法は広くスタンダートであるとは言えませんが、日常のメモをMarkdownで記録する際に便利だと考えたため、サポートしています。
+In addition to the features covered in the [Basic Markdown Syntax](./basic-markdown-syntax.md), FlexiMark supports its own extended syntax. While these additions are not widely recognized as standard, we’ve included them because they’re useful for taking everyday notes in Markdown.
 
-## 付箋（Admonition/Alert）記法
+## Admonition/Alert Syntax
 
-[DocusaurusのAdmonitions](https://docusaurus.io/docs/markdown-features/admonitions) や [GitHubのAlert](https://docs.github.com/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) に相当する機能です。ブロック内では各種Markdownの記法を使うことができます。また、後述する[「付箋（Admonition/Alert）の収集」](../feature/collect-admonitions.md)を用いることで、指定カテゴリ以下の全てのノートに存在する付箋（Admonition/Alert）を単一のMarkdownに収集して整理することもできます。
+This feature is equivalent to [Docusaurus Admonitions](https://docusaurus.io/docs/markdown-features/admonitions) and [GitHub Alerts](https://docs.github.com/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts). You can use various Markdown elements within these blocks. Additionally, using [“Collect Admonitions”](../feature/collect-admonitions.md), you can gather and organize all Admonitions/Alerts from notes under a specified category into a single Markdown file.
 
 ```plaintext
 :::info
@@ -42,7 +42,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ![](img/extended-markdown-syntax/00_admonition_alert.webp)
 
-付箋（Admonition/Alert）にカスタムタイトルをつけることもできます。タイトルには各種Markdown記法を使うことができます。
+You can also add custom titles to Admonitions/Alerts. These titles can include Markdown syntax.
 
 ```plaintext
 :::info[*Custom* ~Title~]
@@ -74,15 +74,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 :::tip
 
-付箋（Admonition/Alert）はネストもできますが、`:`の数を変えることでペアを作る書き方がおすすめです。
+Admonitions/Alerts can be nested. It's recommended to use a different number of colons (`:`) to define matching pairs.
 
 ![](img/extended-markdown-syntax/02_admonition_alert_nested.webp)
 
 :::
 
-## タブ記法
+## Tabs Syntax
 
-タブを作り、内容を分けることができます。ブロック内では各種Markdownの記法を使うことができます。
+You can create tabs to separate content. All standard Markdown syntax can be used within the tabs.
 
 ```plaintext
 ::::tabs
@@ -104,9 +104,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ![](img/extended-markdown-syntax/03_tab.webp)
 
-## 折り畳み
+## Collapsible Sections
 
-HTMLにおける`<details>`タグの代替となる記法です。カスタムタイトルをつけることもできます。
+This syntax works as an alternative to the HTML `<details>` tag. You can also add custom titles.
 
 ```plaintext
 :::details
@@ -128,10 +128,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ![](img/extended-markdown-syntax/04_details.webp)
 
-
 ## YouTube iframe
 
-YouTubeのURLが1つの段落として追加された場合、自動でiframeに変換します。短縮URL以外にも対応しています。段落中にYouTubeのURLがあった場合はiframeに変換しません。
+When a YouTube URL is added as a standalone paragraph, it is automatically converted into an iframe. This works with both full and shortened URLs. However, URLs embedded within a paragraph will not be converted.
 
 ```plaintext
 https://youtu.be/G1W3aroArqY
@@ -143,13 +142,13 @@ Lorem https://youtu.be/G1W3aroArqY dolor sit amet, consectetur adipiscing elit.
 
 :::warning
 
-VSCodeのプレビュー上ではiframeは正常に動作しません。iframeを動作させたい場合はブラウザプレビューを利用してください。
+YouTube iframes do not work correctly in the VSCode preview. Use a browser preview to view them properly.
 
 :::
 
-## コードブロック
+## Code Blocks
 
-コードブロック内のシンタックスハイライトに加え、タイトル表示、行数表示、行のハイライトに対応しています。
+In addition to syntax highlighting, FlexiMark supports code block titles, line numbers, and line highlighting.
 
 ````plaintext
 ```js
@@ -189,7 +188,7 @@ document.body.addEventListener('click', () => {
 
 ## Mermaid
 
-[Mermaid](https://mermaid.js.org)による各種ダイアグラム描画を行うことができます。
+You can use [Mermaid](https://mermaid.js.org) to render diagrams of various types.
 
 ````plaintext
 ```mermaid
@@ -205,15 +204,15 @@ sequenceDiagram
 
 :::tip
 
-Mermaidのシンタックスハイライトには下記の拡張機能を別途インストールするのがおすすめです。
+For Mermaid syntax highlighting, it’s recommended to install the following extension:
 
 - [Mermaid Markdown Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=bpruitt-goddard.mermaid-markdown-syntax-highlighting)
 
 :::
 
-## ABC記譜法
+## ABC Notation
 
-[ABC記譜法](https://abcnotation.com)に対応し、楽譜を書くことができます。また、シンタックスハイライト、各種スニペット、楽譜の再生、カーソル編集位置の表示などにも対応しています。
+FlexiMark supports [ABC notation](https://abcnotation.com), allowing you to write sheet music. Features include syntax highlighting, snippets, music playback, and visual cues for cursor position.
 
 ````plaintext
 ```abc
@@ -252,8 +251,10 @@ F,2A,2C2 | F,2C2A2 | B,2D2F2- | FAFEB,2 :|
 
 ![](img/extended-markdown-syntax/08_abc.webp)
 
-ABCのコードブロック内でバックスラッシュ（`\`）を入力することで、ABC記譜法のスニペットが表示されます。
+Typing a backslash (`\`) inside an ABC code block will bring up snippet suggestions for ABC notation.
+
 ![](img/extended-markdown-syntax/09_abc_snippet.webp)
 
-また、ABCのコードブロック内でエクスクラメーションマーク（`!`）を入力することで、各種記号のスニペットが表示されます。
+Typing an exclamation mark (`!`) inside an ABC block will bring up symbol snippet suggestions.
+
 ![](img/extended-markdown-syntax/10_abc_mark.webp)

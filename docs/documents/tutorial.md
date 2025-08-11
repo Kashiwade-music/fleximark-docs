@@ -4,51 +4,53 @@ sidebar_position: 1
 
 # Tutorial
 
-## 事前準備
+## Preparation
 
-FlexiMarkはVSCodeの拡張機能です。まず、VSCodeがインストール済みであることを確認してください。
-インストールされていない方は下記からインストールしてください。
+FlexiMark is a VSCode extension. First, make sure you have VSCode installed.  
+If it's not installed, you can download it from the link below:
 
 https://code.visualstudio.com
 
-その後、FlexiMarkをインストールします。下記のリンクを開いた後、「Install」ボタンをクリックしてください。
+Next, install FlexiMark. Open the link below and click the “Install” button:
 
 https://marketplace.visualstudio.com/items?itemName=Kashiwade.fleximark
 
-:::tip[おすすめの拡張機能]
+:::tip[Recommended Extensions]
 
-Markdownの記述をより便利にするために、いくつかのおすすめの拡張機能が存在します。併せてインストールすることを検討してください。
+To make writing Markdown easier, there are some useful extensions you might want to install alongside FlexiMark:
 
 - [Markdown All In One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 - [Mermaid Markdown Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=bpruitt-goddard.mermaid-markdown-syntax-highlighting)
 
 :::
 
-## 動作確認
+## Checking Functionality
 
-適当なMarkdownファイルを開いてください。FlexiMarkが正しくインストールされていれば、タブの右端にアイコンが表示されます。
-そのアイコンをクリックすることでプレビューが開きます。
+Open any Markdown file. If FlexiMark is properly installed, you’ll see an icon at the far right of the tab bar.  
+Clicking this icon will open the preview.
 
 ![](img/tutorial/00_preview-icon.webp)
 
 ![](img/tutorial/01_preview-icon-click-result.webp)
 
-FlexiMarkはMarkdownのプレビュー機能は、後述するFlexiMark Workspaceの外でも使用することができます。
+FlexiMark’s preview feature can be used even outside of a FlexiMark Workspace.
 
-## FlexiMark Workspaceの作成
+## Creating a FlexiMark Workspace
 
-FlexiMark専用のディレクトリを作成し、FlexiMark Workspaceとして設定します。今後、Markdownノートの作成はこのディレクトリ/Workspace内で行います。
+Create a dedicated directory for FlexiMark and set it as a FlexiMark Workspace. From now on, Markdown notes will be created inside this directory/workspace.
 
-空のディレクトリを作成し、VSCodeで開いてください。その後 `F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+Create an empty directory and open it in VSCode. Then press `F1` and enter the following command. Press `Enter` after typing.
+
 ```plaintext
 FlexiMark: Initialize Workspace as Note Taking Directory
 ```
 ![](img/tutorial/02_prompt_initialize_command.webp)
 
-すると下記のような画面になります。エディタにはコメント付きの`.vscode/settings.json`が表示されています。このコメントはFlexiMarkの各設定項目の説明を記しています。
+You’ll then see a screen like this. The editor will show a commented `.vscode/settings.json` file. These comments explain the various FlexiMark settings.
+
 ![](img/tutorial/03_workspace_initialized.webp)
 
-まずはノートのカテゴリをカスタマイズしてみましょう。`.vscode/settings.json`の下記の部分をお好みに修正してください。日本語などの2バイト文字も可能です。
+Let’s start by customizing the note categories. Modify the following part of `.vscode/settings.json` as you like. Double-byte characters like Japanese are supported.
 
 ```json title=".vscode/settings.json" {8-18}
 {
@@ -73,34 +75,46 @@ FlexiMark: Initialize Workspace as Note Taking Directory
   ...
 ```
 
-それでは記念すべき最初のノートを作成してみましょう！`F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+Now let’s create your very first note! Press `F1` and enter the following command. Then press `Enter`.
+
 ```plaintext
 FlexiMark: Create New Note
 ```
 ![](img/tutorial/04_create_first_note.webp)
 
-すると、先ほど設定したカテゴリ構造に基づいてカテゴリを選択するダイアログが表示されます。矢印キーで選択して`Enter`キーを押すと、その子カテゴリの選択に移ります。末端の子カテゴリの選択が完了するまで、このカテゴリ選択は続きます。途中のカテゴリで選択を終了したい場合は、ダイアログ一番下の項目を選択します。
+A dialog will appear prompting you to select a category based on the structure you just defined.  
+Use the arrow keys to choose a category and press `Enter` to move to the subcategory.  
+The selection continues until you reach the final subcategory.  
+If you want to stop at an intermediate level, select the bottom-most option in the dialog.
 
 ![](img/tutorial/05_choose_category.webp)
 
-続いて、Markdownノートのテンプレートの選択に移ります。既定では2つのサンプルを用意しています。このテンプレートは`.vscode/settings.json`で変更可能です。まずは`default`を選んで`Enter`キーを押してください。
+Next, you’ll be asked to choose a Markdown note template.  
+By default, two sample templates are available. These can be changed in `.vscode/settings.json`.  
+For now, select `default` and press `Enter`.
+
 ![](img/tutorial/06_choose_template.webp)
 
-最後に、Markdownノートのファイル名を入力します。最終的なファイル名は、`.vscode/settings.json`に設定されている接頭辞(prefix)と接尾辞(suffix)が付与されて、`{{prefix}}{{YOUR FILE NAME}}{{suffix}}.md`となります。
+Finally, enter a filename for your Markdown note.  
+The final file name will follow this format: `{{prefix}}{{YOUR FILE NAME}}{{suffix}}.md`,  
+where the prefix and suffix are defined in `.vscode/settings.json`.
+
 ![](img/tutorial/07_input_filename.webp)
 
-ノートが作成されました！
-1. 指定したカテゴリ階層にノートが作成されていることを確認してください。
-2. `first tabstop`の部分に任意の文字を入力したら、`Tab`キーを押すことでカーソルが`second tabstep`に移動します。
+Your note has been created!  
+1. Confirm that the note has been created in the selected category hierarchy.  
+2. Enter any text in the `first tabstop`, then press the `Tab` key to move the cursor to the `second tabstep`.
 
 ![](img/tutorial/08_note_created.webp)
 
 :::info
 
-この状態で、先ほどと同じく右側のプレビューボタンを押すと、ブラウザでプレビューが開きます。この設定は`.vscode/settings.json`で変更可能です。
+At this point, clicking the preview button on the right side—just like before—will open the preview in your browser.  
+This behavior can be customized in `.vscode/settings.json`.
 
 :::
 
-## 次のステップ
+## Next Steps
 
-以上でFlexiMarkの初回セットアップは終了です。続いて [Basic Usage](/docs/category/basic-usage) で基本的な使い方を紹介します。
+That’s it for the initial FlexiMark setup!  
+Next, head over to [Basic Usage](/docs/category/basic-usage) to learn the basics of how to use it.

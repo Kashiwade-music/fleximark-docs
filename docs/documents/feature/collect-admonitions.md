@@ -1,30 +1,31 @@
-# 付箋（Admonition/Alert）の収集
+# Collecting Admonitions/Alerts
 
-この機能は、指定したカテゴリ以下にある全てのノートから、[付箋（Adomonition/Alert）記法](../basics/extended-markdown-syntax.md#付箋admonitionalert記法)で書かれたメモや注意書きを自動的に抽出し、1つのMarkdownファイルにまとめるものです。これにより、複数のノートに分散している重要な情報を、カテゴリ単位で一覧・整理できるようになります。
+This feature automatically extracts all notes and remarks written using the [Admonition/Alert syntax](../basics/extended-markdown-syntax.md#付箋admonitionalert記法) from every note under a specified category, and compiles them into a single Markdown file. This allows you to organize and view important information scattered across multiple notes by category.
 
-たとえば、「数学」カテゴリの下に複数の学習ノートがあり、それぞれのノートに自分のつまずきポイントを付箋形式で記録していた場合、それらの付箋だけをまとめて抽出し、「数学のつまずきメモ集」として再利用することが可能です。復習や情報の見直しに役立ちます。
+For example, if you have several study notes under a "Mathematics" category, and each note includes sticky notes recording your stumbling points using the Admonition format, you can extract just those notes and reuse them as a "Collection of Stumbling Points in Mathematics." This is useful for review and revisiting information.
 
 ![](img/collect-admonitions/00_collect_sample.webp)
 
-## 操作方法
+## How to Use
 
-FlexiMark WorkspaceをVSCodeで開いた状態で、その後 `F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+With the FlexiMark Workspace open in VSCode, press the `F1` key and enter the following command. Then press `Enter`.
+
 ```plaintext
 FlexiMark: Collect admonitions/alerts and compile them into a single Markdown file
 ```
 ![](img/collect-admonitions/01_input_command.webp)
 
-続いてカテゴリ選択ダイアログが表示されます。収集したいノートが含まれるカテゴリを選択してください。\
-途中のカテゴリを選択したい場合は、ダイアログ一番下の項目を選択します。
+A category selection dialog will appear. Select the category that contains the notes you want to collect.\
+To select an intermediate category, choose the item at the very bottom of the dialog.
 ![](img/collect-admonitions/02_choose_category.webp)
 
-最後に、付箋（Admonition/Alert）記法を収集して記録するノートのファイル名を入力します。
+Finally, enter a file name for the note that will store the collected Admonition/Alert syntax.
 ![](img/collect-admonitions/03_input_filename.webp)
 :::warning
 
-このファイル名に接頭辞(prefix)と接尾辞(suffix)は付与されません。
+No prefix or suffix will be added to the file name.
 
 :::
 
-収集が完了します。
+The collection process will then be completed.
 ![](img/collect-admonitions/00_collect_sample.webp)

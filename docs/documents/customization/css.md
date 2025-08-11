@@ -4,23 +4,23 @@ sidebar_position: 6
 
 # CSS
 
-FlexiMarkでは、プレビュー画面のスタイルを自由にカスタマイズできます。
+FlexiMark allows you to freely customize the style of the preview screen.
 
-## 概要
+## Overview
 
-プレビュー時の見た目は、以下の3種類のCSSによって決まります。
+The appearance during preview is determined by the following three types of CSS:
 
-1. Global CSS
-2. Workspace CSS
-3. Markdownファイル内の`<style>`タグ
+1. Global CSS  
+2. Workspace CSS  
+3. `<style>` tags within Markdown files  
 
-Workspace CSSは、Global CSSを上書きします。これにより、一部のスタイルだけを変更することも可能です。
+Workspace CSS overrides Global CSS, allowing you to change only specific styles if needed.
 
-## 変更方法
+## How to Change
 
 ### Global CSS
 
-`F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+Press the `F1` key and enter the following command. Then press `Enter`.
 
 ```plaintext
 FlexiMark: Open Workspace CSS
@@ -28,13 +28,13 @@ FlexiMark: Open Workspace CSS
 
 ![](img/css/00_command_global.webp)
 
-この操作により、Global CSSがプレビューされます。このファイルを編集することで、スタイルを変更できます。
+This will open the Global CSS in preview mode. You can edit this file to modify the styles.
 
 ![](img/css/01_gen_global_css.webp)
 
 ### Workspace CSS
 
-`F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+Press the `F1` key and enter the following command. Then press `Enter`.
 
 ```plaintext
 FlexiMark: Open Global CSS
@@ -42,10 +42,10 @@ FlexiMark: Open Global CSS
 
 ![](img/css/02_command_workspace.webp)
 
-この操作により、ワークスペース内に `.fleximark/fleximark.css` というファイルが作成されます。
+This will create a file called `.fleximark/fleximark.css` in your workspace.  
 ![](img/css/03_gen_workspace_css.webp)
 
-このファイルを編集することで、スタイルを変更できます。たとえば、見出しの文字色を赤にしたい場合は、以下のように記述します。
+By editing this file, you can change the styles. For example, if you want to make the headings red, you can write:
 
 ```css title=".fleximark/fleximark.css" {9-16}
 /* 
@@ -66,20 +66,21 @@ FlexiMark: Open Global CSS
 }
 ```
 
-この設定を保存した後、任意のMarkdownファイルを開くと、見出しが赤く表示されるようになります。
+After saving this setting, open any Markdown file and the headings will appear in red.
 
 ![](img/css/04_css_change_example.webp)
 
 :::tip
 
-FlexiMarkのプレビューでは、すべてのHTML要素が `<div class="markdown-body">` の中に含まれます。そのため、CSSを書く際は `.markdown-body` をスコープとして指定するのがおすすめです。
+In FlexiMark’s preview, all HTML elements are wrapped inside a `<div class="markdown-body">`.  
+So it’s recommended to scope your CSS using `.markdown-body`.
 
 :::
 
 :::warning
 
-CSSの変更をプレビューに反映させるには、プレビュー画面を更新する必要があります。\
-`F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+To reflect CSS changes in the preview, you need to reload the preview screen.  
+Press the `F1` key and enter the following command. Then press `Enter`.
 
 ```plaintext
 FlexiMark: Force Reload Preview

@@ -2,19 +2,19 @@
 sidebar_position: 4
 ---
 
-# アセットの保存場所
+# Asset Save Location
 
-VSCodeのエディタに張り付けた画像の保存場所を指定できます。
+You can specify where images pasted into the VSCode editor are saved.
 
-## 概要
+## Overview
 
-VSCodeの機能により、下記の操作で画像の挿入が可能です。
+VSCode allows you to insert images using the following methods:
 
-- 画像がクリップボードにある場合はVSCode上で`Ctrl+V`
-- `Shift`キーを押しながら画像をVSCodeのテキストエディタ上にドラッグ&ドロップ
+- Press `Ctrl+V` when an image is in the clipboard
+- Drag and drop an image onto the VSCode text editor while holding the `Shift` key
 
-デフォルトの設定では、`./attachments`フォルダ以下にノートのカテゴリと同じ階層の位置に保存されます。\
-例えば、`Tips/Life/Hello World.md`に`image.png`を貼り付けた場合、画像は`attachments/Tips/Life/Hello World`以下に保存されます。
+By default, images are saved in the `./attachments` folder, in a path that mirrors the note's category structure.\
+For example, if you paste `image.png` into `Tips/Life/Hello World.md`, the image will be saved under `attachments/Tips/Life/Hello World`.
 
 ```plaintext
 <<FlexiMark Workspace>>
@@ -28,9 +28,10 @@ VSCodeの機能により、下記の操作で画像の挿入が可能です。
                 └── image.png  <- saved here
 ```
 
-## 変更方法
+## How to Change
 
-`.vscode/settings.json`を開き、下記の部分を修正してください。下記はデフォルトの設定です。
+Open `.vscode/settings.json` and modify the section below. The following is the default setting:
+
 ```json title=".vscode/settings.json" {3-5} 
 {
   ...
@@ -41,6 +42,6 @@ VSCodeの機能により、下記の操作で画像の挿入が可能です。
 }
 ```
 
-詳細はVSCodeの下記のドキュメントを参照してください。
+For more details, refer to the following VSCode documentation:
 
 https://code.visualstudio.com/updates/v1_79#_markdowncopyfilesdestination

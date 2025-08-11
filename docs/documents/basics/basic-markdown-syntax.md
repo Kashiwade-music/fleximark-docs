@@ -2,23 +2,23 @@
 sidebar_position: 1
 ---
 
-# Markdownの文法（基本）
+# Basic Markdown Syntax
 
-FlexiMarkがサポートするMarkdownの基本文法を紹介します。
+Introducing the basic Markdown syntax supported by FlexiMark.
 
-## 概要
+## Overview
 
-FlexiMarkは [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/) に対応しています。GFMは、標準仕様である[CommonMark](https://spec.commonmark.org)をベースとした拡張仕様で、GitHub.comやGitHub Enterpriseで使われているもののベースとなっています。
+FlexiMark supports [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/), an extended specification based on the standard [CommonMark](https://spec.commonmark.org). GFM is the foundation for the Markdown used on GitHub.com and GitHub Enterprise.
 
 :::info
 
-FlexiMarkはGFMに関するMarkdownのパースに[remark-gfm](https://github.com/remarkjs/remark-gfm)を利用しています。GFMのより詳細な実装は、[remark-gfm](https://github.com/remarkjs/remark-gfm)のREADME.mdをご覧ください。
+FlexiMark uses [remark-gfm](https://github.com/remarkjs/remark-gfm) for parsing GFM-related Markdown. For more detailed implementation information, please refer to the README.md of [remark-gfm](https://github.com/remarkjs/remark-gfm).
 
 :::
 
 ## CommonMark
 
-### 強調
+### Emphasis
 
 ```plaintext
 *Italics*
@@ -34,16 +34,16 @@ __Bold__
 
 :::tip
 
-太字や斜体にせずにアスタリスクやアンダースコアを使いたい場合は、前にバックスラッシュを入力してください。
+If you want to use asterisks or underscores without making text bold or italic, add a backslash before them.
 
 - `\*`
 - `\_`
 
 :::
 
-### 段落
+### Paragraphs
 
-段落の区切りは、1行以上の空白行で明示します。段落内で改行する場合はバックスラッシュ`\`か、半角スペース2つ以上`  `を入力して改行します。
+Separate paragraphs with one or more blank lines. To insert a line break within a paragraph, use a backslash `\` or two or more spaces `  `.
 
 ```plaintext
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque justo. Praesent non felis semper, porta ipsum eget, eleifend eros.
@@ -61,14 +61,13 @@ Nulla vel pellentesque justo. Praesent non felis semper, porta ipsum eget, eleif
 
 :::tip
 
-バックスラッシュ`\`や2つ以上の半角スペース`  `を伴わない改行は無視されます。
+Line breaks without a backslash `\` or two or more spaces `  ` are ignored.
 
 :::
 
-### 見出し
+### Headings
 
-行の先頭にハッシュ（`#`）とスペースを付けると見出しになります。
-ハッシュの数が多いほど、見出しは小さくなります。
+Start a line with a hash (`#`) followed by a space to create a heading. The more hashes you use, the smaller the heading.
 
 ```plaintext
 # Heading 1
@@ -94,7 +93,7 @@ Heading 2
 
 :::tip
 
-オプションで、見出しの終わりにさらに `#` を追加することができます。最初に使った `#` の数と一致させる必要はありません。
+You can optionally add more `#` symbols at the end of the heading. The number does not need to match the beginning.
 
 ```plaintext
 # Heading 1 #
@@ -104,10 +103,9 @@ or
 
 :::
 
-### 引用
+### Blockquotes
 
-引用を作成するには、行の先頭に大なり記号（`>`）を付け、その後にスペースを入れます（スペースは任意です）。
-引用は入れ子にすることができ、他の書式設定も含めることができます。
+To create a blockquote, start a line with a greater-than symbol (`>`) followed by a space (space is optional). Blockquotes can be nested and can include other formatting.
 
 ```plaintext
 > First Line
@@ -121,10 +119,10 @@ or
 
 ![](img/basic-markdown-syntax/03_blockquotes.webp)
 
-### リスト
+### Lists
 
-箇条書きリスト（順不同リスト）は、アスタリスク（`*`）、プラス記号（`+`）、またはハイフン（`-`）のいずれかをリストのマーカーとして使用できます。\
-番号付きリスト（順序付きリスト）は、数字の後にピリオド（`.`）または右括弧（`)`）を付けて使用します。
+For unordered lists, use an asterisk (`*`), plus (`+`), or hyphen (`-`) as the list marker.  
+For ordered lists, use numbers followed by a period (`.`) or closing parenthesis (`)`).
 
 ```plaintext
 - List item
@@ -152,7 +150,7 @@ or
 
 :::tip
 
-順序付きリストについて、数字を1つずつ増加する必要はありません。
+For ordered lists, you don't need to increment the numbers.
 
 ```plaintext
 1. First
@@ -162,9 +160,9 @@ or
 
 :::
 
-### 入れ子のリスト
+### Nested Lists
 
-1つのリストの中に別のリストを入れ子にするには、副リストの各項目を2つか4つのスペースでインデントします。段落、引用ブロック、コードブロックなどの他の要素も入れ子にすることができます。
+To nest a list within another, indent each subitem by 2 or 4 spaces. You can also nest paragraphs, blockquotes, and code blocks.
 
 ```plaintext
 * Item
@@ -184,15 +182,12 @@ or
 
 ![](img/basic-markdown-syntax/04_nested_list.webp)
 
-### リンク
+### Links
 
-リンクは、文中に埋め込むことも、文章の末尾に参考文献として配置することもできます。
-リンクテキストは角括弧「`[]`」で囲み、インラインリンクの場合はリンクのURLを丸括弧「`()`」で囲みます。
+Links can be embedded directly in text or placed as references at the end. Use square brackets `[]` for the link text, and parentheses `()` for the URL in inline links.
 
 ```plaintext
 [My Page](https://kashiwade.works/)
-
-
 
 [My Page][id]
 
@@ -203,14 +198,14 @@ or
 
 :::tip
 
-相対パスのリンクは下記のように書けます。
+You can write relative links like below:
 
 ```plaintext
 [Example](/aaa/example.html)
 [Example](../bbb/example.md)
 ```
 
-また、リンク内にスペースが存在する際は`< >`で囲みます。
+If the link contains spaces, wrap it in `< >`.
 
 ```plaintext
 [Example](<../bbb/this is an example.md>)
@@ -218,12 +213,12 @@ or
 
 :::
 
-### 画像
+### Images
 
-VSCodeの機能により下記の操作でも画像の挿入が可能です。
+With VSCode, you can insert images in the following ways:
 
-- 画像がクリップボードにある場合はVSCode上で`Ctrl+V`
-- `Shift`キーを押しながら画像をVSCodeのテキストエディタ上にドラッグ&ドロップ
+- If an image is on the clipboard, paste it into the editor with `Ctrl+V`
+- Drag and drop the image into the editor while holding `Shift`
 
 ```plaintext
 ![](<attachments/Markdown Syntax/logo.webp>)
@@ -231,10 +226,10 @@ VSCodeの機能により下記の操作でも画像の挿入が可能です。
 
 ![](img/basic-markdown-syntax/06_image.webp)
 
-### コード
+### Code
 
-インラインコードを作成するには、バッククォート（ \` ）で囲みます。\
-コードブロックを作成するには、各行を4つのスペースでインデントするか、コードブロックの上下に3つのバッククォート（\`\`\`）を配置します。
+To create inline code, wrap the text in backticks (\`).  
+To create a code block, indent each line with 4 spaces or wrap the block with three backticks (\`\`\`).
 
 ````plaintext
 Inline `code`
@@ -250,9 +245,9 @@ Or use 3 backticks
 
 ## GFM
 
-### 自動リンク
+### Autolinks
 
-文中のURLは自動でリンクになります。
+URLs in the text automatically become links.
 
 ```plaintext
 https://kashiwade.works
@@ -262,9 +257,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque 
 
 ![](img/basic-markdown-syntax/08_auto_link.webp)
 
-### 脚注
+### Footnotes
 
-脚注を付けることができます。
+You can add footnotes.
 
 ```plaintext
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque justo. Praesent non felis semper, porta ipsum eget, eleifend eros[^alpha]. Maecenas id gravida nibh, a rhoncus eros.
@@ -274,9 +269,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque 
 
 ![](img/basic-markdown-syntax/09_footnotes.webp)
 
-### 打ち消し線
+### Strikethrough
 
-打ち消し線を引くことができます。
+You can add strikethrough text.
 
 ```plaintext
 ~strikethrough~
@@ -284,9 +279,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque 
 
 ![](img/basic-markdown-syntax/10_strikethrough.webp)
 
-### 表
+### Tables
 
-表を書くことができます。但し、複雑な結合などはできません。
+You can create tables. Complex cell merging is not supported.
 
 ```plaintext
 | left | center | right |
@@ -297,9 +292,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque 
 
 ![](img/basic-markdown-syntax/11_table.webp)
 
-### チェックリスト
+### Checklists
 
-TODOリストを作れます。
+You can create TODO lists.
 
 ```plaintext
 - [ ] task 1

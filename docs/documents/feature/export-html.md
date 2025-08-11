@@ -1,10 +1,10 @@
-# MarkdownのHTML出力
+# HTML Export of Markdown
 
-この機能を使うと、開いているノートをHTMLファイルとして書き出せます。ノートで使用している画像やCSSなどの全てのアセットも自動で1つのフォルダにまとめられます。
+This feature allows you to export the currently open note as an HTML file. All assets used in the note, such as images and CSS, will automatically be collected into a single folder.
 
-## 方法
+## How to Use
 
-HTMLとして出力したいノートを開いた状態で`F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+With the note you want to export open, press the `F1` key and enter the following command. Then press the `Enter` key.
 
 ```plaintext
 FlexiMark: Export as HTML
@@ -12,7 +12,7 @@ FlexiMark: Export as HTML
 
 ![](img/export-html/00_command.webp)
 
-処理が完了すると、ノートと同じ場所にノート名と同じ名前のフォルダが作成されます。\
-このフォルダには、変換後のHTMLファイルと、ノートで使用しているすべてのアセットが含まれています。HTMLファイルは相対パスでアセットを参照しているため、フォルダごと移動しても正しく表示できます。
+Once the process is complete, a folder with the same name as the note will be created in the same location as the note.\
+This folder will contain the converted HTML file along with all assets used in the note. Since the HTML file references assets using relative paths, it will display correctly even if the entire folder is moved.
 
 ![](img/export-html/01_result.webp)

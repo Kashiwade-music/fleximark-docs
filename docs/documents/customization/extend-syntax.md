@@ -2,18 +2,18 @@
 sidebar_position: 7
 ---
 
-# 文法の拡張
+# Extending Grammar
 
-FlexiMarkでは、Markdownの文法を自由に拡張することができます。
+FlexiMark allows you to freely extend Markdown syntax.
 
-## 概要
+## Overview
 
-FlexiMarkでは下記のフローに従ってMarkdownをHTMLに変換し、プレビュー表示を行っています。ユーザーは下記の`Plugin`の部分に存在する各処理を記述することで、Markdownの文法を拡張できます。
+FlexiMark converts Markdown to HTML and displays a preview according to the flow shown below. You can extend Markdown syntax by adding your own processing in the `Plugin` sections.
 
 ```mermaid
 flowchart TD
     start([Markdown String]) --> PluginMarkdownString
-    
+
     subgraph PluginMarkdownString [Plugin]
         direction LR
         gPluginMarkdownString[Global:<br>transformMarkdownString] --> wPluginMarkdownString[Workspace:<br>transformMarkdownString]
@@ -43,21 +43,21 @@ flowchart TD
     PluginHtmlString --> finish([HTML String])
 ```
 
-:::info[Mdast・Hastとは？]
+:::info[What are Mdast and Hast?]
 
-MarkdownをHTMLに変換する過程では、単純に文字列置換を行うのではなく、一度「構造化されたデータ」に変換してから処理を進めます。このとき使われる中間表現が **MDAST** と **HAST** です。
+During the Markdown-to-HTML conversion process, rather than simply performing string replacements, the content is first converted into structured data and processed. The intermediate representations used are **MDAST** and **HAST**.
 
-### [MDAST（Markdown Abstract Syntax Tree）](https://github.com/syntax-tree/mdast)
+### [MDAST (Markdown Abstract Syntax Tree)](https://github.com/syntax-tree/mdast)
 
-MDAST は「Markdown Abstract Syntax Tree」の略で、Markdown 文書の構造を表現する抽象構文木（AST）です。
-例えば、次のような Markdown:
+MDAST stands for "Markdown Abstract Syntax Tree", an abstract syntax tree that represents the structure of a Markdown document.  
+For example, the following Markdown:
 
 ```markdown
 # Heading
 Main **Strong**
 ```
 
-は、MDAST では以下のような構造で表現されます:
+Would be represented in MDAST as:
 
 ```json
 {
@@ -119,14 +119,14 @@ Main **Strong**
 }
 ```
 
-この構造を操作すれば、Markdown の特定の要素を追加・削除・変換できます。
+By manipulating this structure, you can add, remove, or transform specific elements in the Markdown.
 
-### [HAST（Hypertext Abstract Syntax Tree）](https://github.com/syntax-tree/hast)
+### [HAST (Hypertext Abstract Syntax Tree)](https://github.com/syntax-tree/hast)
 
-HAST は「Hypertext Abstract Syntax Tree」の略で、HTML 文書を構造化した抽象構文木です。
-MDAST を HTML に変換するとき、まず MDAST から HAST に変換し、その後 HTML 文字列にシリアライズします。
+HAST stands for "Hypertext Abstract Syntax Tree", a structured representation of an HTML document.  
+When converting Markdown to HTML, the process first transforms MDAST to HAST, and then serializes it into an HTML string.
 
-先ほどの例を HAST に変換すると、次のような構造になります:
+The above example, when converted to HAST, would look like:
 
 ```json
 {
@@ -162,11 +162,11 @@ MDAST を HTML に変換するとき、まず MDAST から HAST に変換し、�
 
 :::
 
-## 変更方法
+## How to Modify
 
 ### Global Parser
 
-`F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+Press the `F1` key and enter the following command, then press `Enter`.
 
 ```plaintext
 FlexiMark: Open Global Parser Plugin File
@@ -174,14 +174,12 @@ FlexiMark: Open Global Parser Plugin File
 
 ![](img/extend-syntax/00_command_global.webp)
 
-
-この操作により、Global Parser Pluginがプレビューされます。このファイルを編集することで、Markdown文法を拡張できます。
+This will open a preview of the Global Parser Plugin file. You can extend Markdown syntax by editing this file.  
 ![](img/extend-syntax/01_global_plugin.webp)
-
 
 ### Workspace Parser
 
-`F1`キーを押下し、下記を入力してください。入力したら`Enter`キーを押してください。
+Press the `F1` key and enter the following command, then press `Enter`.
 
 ```plaintext
 FlexiMark: Open Workspace Parser Plugin File
@@ -189,21 +187,21 @@ FlexiMark: Open Workspace Parser Plugin File
 
 ![](img/extend-syntax/02_command_workspace.webp)
 
-この操作により、Workspace Parser Pluginがプレビューされます。このファイルを編集することで、Markdown文法を拡張できます。
+This will open a preview of the Workspace Parser Plugin file. You can extend Markdown syntax by editing this file.  
 ![](img/extend-syntax/03_workspace_plugin.webp)
 
-## チュートリアル
+## Tutorial
 
-実際に独自文法を設定してみましょう。独自文法を設定する際は[Directive記法](https://github.com/micromark/micromark-extension-directive?tab=readme-ov-file#syntax)を用いるのが簡便です。
+Let’s try defining a custom syntax. The easiest way to define a custom syntax is by using the [Directive syntax](https://github.com/micromark/micromark-extension-directive?tab=readme-ov-file#syntax).
 
-::::info[Directive記法とは？]
+::::info[What is Directive Syntax?]
 
-Directive記法は、Markdown内に「特殊な命令ブロック」を埋め込み、レンダリング時に独自の処理やカスタム要素を挿入できるようにするための拡張記法です。
-もともとは[CommonMarkの拡張案](https://talk.commonmark.org/t/generic-directives-plugins-syntax/444)のひとつで、プラグインを通してHTMLやその他の出力形式に変換されます。
+Directive syntax is an extension for embedding “special instruction blocks” in Markdown, allowing you to insert custom behavior or elements during rendering.  
+Originally proposed as a [CommonMark extension](https://talk.commonmark.org/t/generic-directives-plugins-syntax/444), it uses plugins to convert to HTML or other output formats.
 
 ### TextDirective
 
-インラインで挿入可能なDirectiveです。
+A directive that can be inserted inline.
 
 ```markdown title="Markdown"
 :name[content]{key=val}
@@ -249,7 +247,7 @@ Directive記法は、Markdown内に「特殊な命令ブロック」を埋め込
 
 ### LeafDirective
 
-TextDirectiveと近い記法ですが、インラインで使うことはできません。
+Similar to TextDirective, but cannot be used inline.
 
 ```markdown title="Markdown"
 ::name[content]{key=val}
@@ -286,7 +284,7 @@ TextDirectiveと近い記法ですが、インラインで使うことはでき�
 
 ### ContainerDirective
 
-ブロックを構成できるDirectiveです。[Markdownの文法（拡張）](../basics/extended-markdown-syntax.md)で紹介した一部の記法はContainerDirectiveを利用しています。
+A directive that can define a block. Some of the syntax introduced in [Extended Markdown Syntax](../basics/extended-markdown-syntax.md) uses ContainerDirective.
 
 ```markdown title="Markdown"
 :::name[content]{key=val}
@@ -353,8 +351,9 @@ block content
 
 ::::
 
-TextDirectiveを使ったサンプルを作ってみましょう。このDirectiveは`:highlight[content]{color=red}`とすることで、文字の色を自由に設定できます。\
-下記のように`parserPlugin.js`を編集してください。HTML要素の設定は`data.hName`や`data.Properties`で設定できます。
+Let’s create a sample using TextDirective.  
+This directive lets you freely set the text color using syntax like `:highlight[content]{color=red}`.  
+Edit the `parserPlugin.js` file as shown below. HTML elements can be configured via `data.hName` and `data.hProperties`.
 
 ```javascript title="parserPlugin.js" {6-16,26-47}
 module.exports = {
@@ -406,12 +405,11 @@ function visit(tree, types, visitor) {
 }
 ```
 
-適当なMarkdownファイルを作成して、次のように入力しましょう。添付図のような見た目になれば成功です。
-
+Create a new Markdown file and enter the following. If it looks like the attached image, you're all set.
 
 ```plaintext collapse
 Lorem :highlight[ipsum] :highlight[dolor sit]{color=blue} :highlight[amet]{color=#eb49a4},\
-consectetur :highlight[**adipiscing**]{color="rgb(94, 201, 85)"} elit. 
+consectetur :highlight[**adipiscing**]{color="rgb(94, 201, 85)"} elit.
 ```
 
 ![](img/extend-syntax/04_extend_sample.webp)

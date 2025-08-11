@@ -2,26 +2,27 @@
 sidebar_position: 5
 ---
 
-# プレビューの方法
+# How to Preview
 
-右上のアイコンをクリックしたときのプレビュー方法を変更できます。
+You can change the preview method that is triggered when clicking the icon in the top-right corner.
 
-## 概要
+## Overview
 
-FlexiMarkではMarkdownのプレビューをVSCode上とブラウザのどちらで行うのか選択できます。どちらも一長一短なので、用途に合わせて設定してください。
+FlexiMark allows you to choose whether to preview Markdown in VSCode or in a browser. Each option has its pros and cons, so configure it according to your needs.
 
 ```mermaid
 flowchart TD
-    A{{Markdownファイルは<br>FlexiMark Workspace内か？}} -->|Yes| B{{MarkdownにJSやiframeがある際<br>それを動作させたいか？}}
-    A -->|No| D[【VSCode上】<br>ユーザーのJSは実行されず、セキュリティ上安全。]
+    A{{Is the Markdown file<br>inside the FlexiMark Workspace?}} -->|Yes| B{{Do you want to enable<br>JS or iframe in the Markdown?}}
+    A -->|No| D[【In VSCode】<br>User JS is not executed, making it secure.]
 
-    B -->|Yes| C[【ブラウザ】<br>JSもiframeも動作する。]
-    B -->|No| E[【VSCode上】<br>JSは実行されず、<br>iframeは動作しない。]
+    B -->|Yes| C[【In Browser】<br>JS and iframe are both supported.]
+    B -->|No| E[【In VSCode】<br>JS is not executed,<br>iframe is not supported.]
 ```
 
-## 変更方法
+## How to Change the Setting
 
-`.vscode/settings.json`を開き、下記の部分を修正してください。取り得る値は`vscode`か`browser`です。下記はデフォルトの設定です。
+Open `.vscode/settings.json` and edit the following section. Available values are `vscode` or `browser`. Below is the default setting:
+
 ```json title=".vscode/settings.json" {3} 
 {
   ...
