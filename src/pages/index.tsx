@@ -17,7 +17,7 @@ function HomepageHeader() {
           alt="Product Logo"
           className={styles.productLogo}
         />
-        <Link className={styles.ctaButton} to="/docs/documents/intro">
+        <Link className={styles.ctaButton} to="/docs/documents/tutorial">
           Get Started
         </Link>
         <div className={styles.screenshotWrapper}>
