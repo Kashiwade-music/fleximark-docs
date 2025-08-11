@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# Extending Grammar
+# Extending Markdown Syntax
 
 FlexiMark allows you to freely extend Markdown syntax.
 
