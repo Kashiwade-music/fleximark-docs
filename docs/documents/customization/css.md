@@ -26,11 +26,11 @@ Workspace CSSは、Global CSSを上書きします。これにより、一部の
 FlexiMark: Open Workspace CSS
 ```
 
-![](img/css/00_command_global.png)
+![](img/css/00_command_global.webp)
 
 この操作により、Global CSSがプレビューされます。このファイルを編集することで、スタイルを変更できます。
 
-![](img/css/01_gen_global_css.png)
+![](img/css/01_gen_global_css.webp)
 
 ### Workspace CSS
 
@@ -40,10 +40,10 @@ FlexiMark: Open Workspace CSS
 FlexiMark: Open Global CSS
 ```
 
-![](img/css/02_command_workspace.png)
+![](img/css/02_command_workspace.webp)
 
 この操作により、ワークスペース内に `.fleximark/fleximark.css` というファイルが作成されます。
-![](img/css/03_gen_workspace_css.png)
+![](img/css/03_gen_workspace_css.webp)
 
 このファイルを編集することで、スタイルを変更できます。たとえば、見出しの文字色を赤にしたい場合は、以下のように記述します。
 
@@ -68,7 +68,7 @@ FlexiMark: Open Global CSS
 
 この設定を保存した後、任意のMarkdownファイルを開くと、見出しが赤く表示されるようになります。
 
-![](img/css/04_css_change_example.png)
+![](img/css/04_css_change_example.webp)
 
 :::tip
 

@@ -40,7 +40,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 :::
 ```
 
-![](img/extended-markdown-syntax/00_admonition_alert.png)
+![](img/extended-markdown-syntax/00_admonition_alert.webp)
 
 付箋（Admonition/Alert）にカスタムタイトルをつけることもできます。タイトルには各種Markdown記法を使うことができます。
 
@@ -70,13 +70,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 :::
 ```
 
-![](img/extended-markdown-syntax/01_admonition_alert_custom_title.png)
+![](img/extended-markdown-syntax/01_admonition_alert_custom_title.webp)
 
 :::tip
 
 付箋（Admonition/Alert）はネストもできますが、`:`の数を変えることでペアを作る書き方がおすすめです。
 
-![](img/extended-markdown-syntax/02_admonition_alert_nested.png)
+![](img/extended-markdown-syntax/02_admonition_alert_nested.webp)
 
 :::
 
@@ -102,7 +102,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ::::
 ```
 
-![](img/extended-markdown-syntax/03_tab.png)
+![](img/extended-markdown-syntax/03_tab.webp)
 
 ## 折り畳み
 
@@ -126,7 +126,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 :::
 ```
 
-![](img/extended-markdown-syntax/04_details.png)
+![](img/extended-markdown-syntax/04_details.webp)
 
 
 ## YouTube iframe
@@ -139,7 +139,7 @@ https://youtu.be/G1W3aroArqY
 Lorem https://youtu.be/G1W3aroArqY dolor sit amet, consectetur adipiscing elit.
 ```
 
-![](img/extended-markdown-syntax/05_youtube.png)
+![](img/extended-markdown-syntax/05_youtube.webp)
 
 :::warning
 
@@ -185,7 +185,7 @@ document.body.addEventListener('click', () => {
 ```
 ````
 
-![](img/extended-markdown-syntax/06_code_block.png)
+![](img/extended-markdown-syntax/06_code_block.webp)
 
 ## Mermaid
 
@@ -201,7 +201,7 @@ sequenceDiagram
 ```
 ````
 
-![](img/extended-markdown-syntax/07_mermaid.png)
+![](img/extended-markdown-syntax/07_mermaid.webp)
 
 :::tip
 
@@ -250,10 +250,10 @@ F,2A,2C2 | F,2C2A2 | B,2D2F2- | FAFEB,2 :|
 ```
 ````
 
-![](img/extended-markdown-syntax/08_abc.png)
+![](img/extended-markdown-syntax/08_abc.webp)
 
 ABCのコードブロック内でバックスラッシュ（`\`）を入力することで、ABC記譜法のスニペットが表示されます。
-![](img/extended-markdown-syntax/09_abc_snippet.png)
+![](img/extended-markdown-syntax/09_abc_snippet.webp)
 
 また、ABCのコードブロック内でエクスクラメーションマーク（`!`）を入力することで、各種記号のスニペットが表示されます。
-![](img/extended-markdown-syntax/10_abc_mark.png)
+![](img/extended-markdown-syntax/10_abc_mark.webp)

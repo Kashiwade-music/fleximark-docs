@@ -30,7 +30,7 @@ _Italics_
 __Bold__
 ```
 
-![](img/basic-markdown-syntax/00_emphasis.png)
+![](img/basic-markdown-syntax/00_emphasis.webp)
 
 :::tip
 
@@ -57,7 +57,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Nulla vel pellentesque justo. Praesent non felis semper, porta ipsum eget, eleifend eros.
 ```
 
-![](img/basic-markdown-syntax/01_paragraph.png)
+![](img/basic-markdown-syntax/01_paragraph.webp)
 
 :::tip
 
@@ -90,7 +90,7 @@ Heading 2
 ###### Heading 6
 ```
 
-![](img/basic-markdown-syntax/02_heading.png)
+![](img/basic-markdown-syntax/02_heading.webp)
 
 :::tip
 
@@ -119,7 +119,7 @@ or
 > Last Line
 ```
 
-![](img/basic-markdown-syntax/03_blockquotes.png)
+![](img/basic-markdown-syntax/03_blockquotes.webp)
 
 ### リスト
 
@@ -148,7 +148,7 @@ or
 3) Third
 ```
 
-![](img/basic-markdown-syntax/04_list.png)
+![](img/basic-markdown-syntax/04_list.webp)
 
 :::tip
 
@@ -182,7 +182,7 @@ or
   - Subitem
 ```
 
-![](img/basic-markdown-syntax/04_nested_list.png)
+![](img/basic-markdown-syntax/04_nested_list.webp)
 
 ### リンク
 
@@ -199,7 +199,7 @@ or
 [id]: https://kashiwade.works/ "title"
 ```
 
-![](img/basic-markdown-syntax/05_link.png)
+![](img/basic-markdown-syntax/05_link.webp)
 
 :::tip
 
@@ -229,7 +229,7 @@ VSCodeの機能により下記の操作でも画像の挿入が可能です。
 ![](<attachments/Markdown Syntax/logo.webp>)
 ```
 
-![](img/basic-markdown-syntax/06_image.png)
+![](img/basic-markdown-syntax/06_image.webp)
 
 ### コード
 
@@ -246,7 +246,7 @@ Or use 3 backticks
 ```
 ````
 
-![](img/basic-markdown-syntax/07_code.png)
+![](img/basic-markdown-syntax/07_code.webp)
 
 ## GFM
 
@@ -260,7 +260,7 @@ https://kashiwade.works
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque justo. Praesent non felis semper, porta ipsum eget, eleifend eros. Maecenas https://kashiwade.works gravida nibh, a rhoncus eros. Nunc ac ante egestas, volutpat ante et, scelerisque quam. Maecenas a tortor odio. Nullam gravida vel sapien sed dignissim. Aenean ex magna, lacinia et metus sed, porta gravida dui. Nunc eget ligula eu magna accumsan rhoncus. Aliquam at pulvinar mauris. In tempor interdum tempor. Nam sit amet dui ex.
 ```
 
-![](img/basic-markdown-syntax/08_auto_link.png)
+![](img/basic-markdown-syntax/08_auto_link.webp)
 
 ### 脚注
 
@@ -272,7 +272,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque 
 [^alpha]: bravo and charlie.
 ```
 
-![](img/basic-markdown-syntax/09_footnotes.png)
+![](img/basic-markdown-syntax/09_footnotes.webp)
 
 ### 打ち消し線
 
@@ -282,7 +282,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque 
 ~strikethrough~
 ```
 
-![](img/basic-markdown-syntax/10_strikethrough.png)
+![](img/basic-markdown-syntax/10_strikethrough.webp)
 
 ### 表
 
@@ -295,7 +295,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel pellentesque 
 | DDD  |  EEE   |   FFF |
 ```
 
-![](img/basic-markdown-syntax/11_table.png)
+![](img/basic-markdown-syntax/11_table.webp)
 
 ### チェックリスト
 
@@ -307,4 +307,4 @@ TODOリストを作れます。
 - [X] task 3
 ```
 
-![](img/basic-markdown-syntax/12_check_list.png)
+![](img/basic-markdown-syntax/12_check_list.webp)

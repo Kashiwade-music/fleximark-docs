@@ -172,11 +172,11 @@ MDAST を HTML に変換するとき、まず MDAST から HAST に変換し、�
 FlexiMark: Open Global Parser Plugin File
 ```
 
-![](img/extend-syntax/00_command_global.png)
+![](img/extend-syntax/00_command_global.webp)
 
 
 この操作により、Global Parser Pluginがプレビューされます。このファイルを編集することで、Markdown文法を拡張できます。
-![](img/extend-syntax/01_global_plugin.png)
+![](img/extend-syntax/01_global_plugin.webp)
 
 
 ### Workspace Parser
@@ -187,10 +187,10 @@ FlexiMark: Open Global Parser Plugin File
 FlexiMark: Open Workspace Parser Plugin File
 ```
 
-![](img/extend-syntax/02_command_workspace.png)
+![](img/extend-syntax/02_command_workspace.webp)
 
 この操作により、Workspace Parser Pluginがプレビューされます。このファイルを編集することで、Markdown文法を拡張できます。
-![](img/extend-syntax/03_workspace_plugin.png)
+![](img/extend-syntax/03_workspace_plugin.webp)
 
 ## チュートリアル
 
@@ -414,4 +414,4 @@ Lorem :highlight[ipsum] :highlight[dolor sit]{color=blue} :highlight[amet]{color
 consectetur :highlight[**adipiscing**]{color="rgb(94, 201, 85)"} elit. 
 ```
 
-![](img/extend-syntax/04_extend_sample.png)
+![](img/extend-syntax/04_extend_sample.webp)

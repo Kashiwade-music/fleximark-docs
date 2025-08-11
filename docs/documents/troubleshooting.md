@@ -12,4 +12,4 @@ sidebar_position: 5
 FlexiMark: Force Reload Preview
 ```
 
-![](img/troubleshooting/00_force_reload_preview.png)
+![](img/troubleshooting/00_force_reload_preview.webp)

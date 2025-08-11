@@ -35,7 +35,7 @@ from typing import List, Optional, Tuple
 
 FFMPEG_DEFAULT_OPTS = ["-c:v", "libwebp", "-lossless", "1"]
 
-IMG_LINK_RE = re.compile(r"!\[[^\]]*\]\((<?)([^)\s>]+)(>?) [^)]*\)")
+IMG_LINK_RE = re.compile(r"!\[[^\]]*\]\((<?)([^)\s>]+)(>?)[^)]*\)")
 
 SKIP_EXTS = {".webp"}
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".gif", ".tiff", ".bmp", ".avif"}
@@ -45,15 +45,20 @@ logger = logging.getLogger("md_webp_convert")
 
 
 def find_markdown_files(source_dir: Path) -> List[Path]:
-    return [
-        p
-        for p in source_dir.rglob("*")
-        if p.is_file() and p.suffix.lower() in {".md", ".markdown"}
-    ]
+    results = []
+    for p in source_dir.rglob("*"):
+        if p.is_file() and p.suffix.lower() in {".md", ".markdown"}:
+            results.append(p)
+    return results
 
 
 def extract_image_paths_from_md(md_text: str) -> List[Tuple[str, int]]:
-    return [(m.group(2), m.start(2)) for m in IMG_LINK_RE.finditer(md_text)]
+    matches: List[Tuple[str, int]] = []
+    for m in IMG_LINK_RE.finditer(md_text):
+        img_path = m.group(2)
+        start = m.start(2)
+        matches.append((img_path, start))
+    return matches
 
 
 def is_url(path_str: str) -> bool:
