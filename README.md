@@ -18,8 +18,10 @@ This command starts a local development server and opens up a browser window. Mo
 
 ## Image Optimization
 
+prepare ffmpeg with libaom-av1
+
 ```bash
-python md_avif_convert.py --source ./docs --backup ./backup_images
+python md_img_convert.py --source ./docs --backup ./backup_images
 ```
 
 ## Build
