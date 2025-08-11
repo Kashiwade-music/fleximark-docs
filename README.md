@@ -16,6 +16,12 @@ npm run start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+## Image Optimization
+
+```bash
+python md_avif_convert.py --source ./docs --backup ./backup_images
+```
+
 ## Build
 
 ```bash
