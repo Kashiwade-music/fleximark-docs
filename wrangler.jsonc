@@ -9,6 +9,10 @@
     {
       "pattern": "fleximark.kashiwade.works",
       "custom_domain": true
+    },
+    {
+      "pattern": "fleximark.kashiwade.work",
+      "custom_domain": true
     }
   ]
 }
