@@ -12,13 +12,15 @@ npm i
 
 ```bash
 npm run start
+# or
+npm run start -- --locale ja
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ## Image Optimization
 
-prepare ffmpeg with libaom-av1
+prepare ffmpeg
 
 ```bash
 python md_img_convert.py --source ./docs --backup ./backup_images

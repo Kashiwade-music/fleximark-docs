@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Markdownの文法（拡張）
 
 FlexiMarkがサポートするMarkdownの拡張文法を紹介します。
@@ -9,6 +12,20 @@ FlexiMarkがサポートするMarkdownの拡張文法を紹介します。
 ## 概要
 
 FlexiMarkは[Markdownの文法（基本）](./basic-markdown-syntax.md)で扱ったものに加えて、独自の拡張記法をサポートしています。これらの記法は広くスタンダートであるとは言えませんが、日常のメモをMarkdownで記録する際に便利だと考えたため、サポートしています。
+
+## LaTeX
+
+[KaTeX](https://katex.org)による数式の入力を行うことができます。
+
+```plaintext
+Lorem ipsum $e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}$ sit amet, consectetur adipiscing elit.
+
+$$
+e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}
+$$
+```
+
+![](img/extended-markdown-syntax/00_katex.png)
 
 ## 付箋（Admonition/Alert）記法
 
@@ -149,7 +166,11 @@ VSCodeのプレビュー上ではiframeは正常に動作しません。iframe�
 
 ## コードブロック
 
-コードブロック内のシンタックスハイライトに加え、タイトル表示、行数表示、行のハイライトに対応しています。
+コードブロック内のシンタックスハイライトに加え、タイトル表示、行数表示、行のハイライト、単語のハイライト、差分表示に対応しています。
+
+### 基本記法
+
+シンプルなシンタックスハイライトは下記のように書きます。バッククォートの後に言語名（`plaintext`、`js`、`py`など）を入力してください。
 
 ````plaintext
 ```js
@@ -159,7 +180,14 @@ document.body.addEventListener('click', () => {
   document.body.style.backgroundColor = randomColor;
 });
 ```
+````
+![](img/extended-markdown-syntax/06_code_block_simple.png)
 
+### タイトル
+
+コードブロックにタイトルをつけたい場合は下記のように書きます。言語名は必須です。
+
+````plaintext
 ```js title="color.js"
 document.body.addEventListener('click', () => {
   const colors = ['blue', 'green', 'pink', 'yellow'];
@@ -167,16 +195,130 @@ document.body.addEventListener('click', () => {
   document.body.style.backgroundColor = randomColor;
 });
 ```
+````
+![](img/extended-markdown-syntax/06_code_block_title.png)
 
-```js title="color.js" showLineNumbers
-document.body.addEventListener('click', () => {
-  const colors = ['blue', 'green', 'pink', 'yellow'];
-  const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  document.body.style.backgroundColor = randomColor;
-});
-```
+### 行番号
 
-```js title="color.js" showLineNumbers {1,3-5}
+コードブロックに行番号を付与したい場合は下記のように書きます。言語名は必須です。
+
+<Tabs>
+  <TabItem value="シンプルな例" label="シンプルな例" default>
+    ````plaintext
+    ```js showLineNumbers
+    document.body.addEventListener('click', () => {
+      const colors = ['blue', 'green', 'pink', 'yellow'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    });
+    ```
+    ````
+    ![](img/extended-markdown-syntax/06_code_block_line_number_01.png)
+  </TabItem>
+  <TabItem value="途中の番号から" label="途中の番号から">
+    ````plaintext
+    ```js showLineNumbers=5
+    document.body.addEventListener('click', () => {
+      const colors = ['blue', 'green', 'pink', 'yellow'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    });
+    ```
+    ````
+    ![](img/extended-markdown-syntax/06_code_block_line_number_02.png)
+  </TabItem>
+</Tabs>
+
+### 行のハイライト
+
+コードブロックの特定の行をハイライトしたい場合は下記のように書きます。言語名は必須です。
+
+<Tabs>
+  <TabItem value="シンプルな例" label="シンプルな例" default>
+    1行目と、3から5行目がハイライトされます。
+    ````plaintext
+    ```js {1,3-5}
+    document.body.addEventListener('click', () => {
+      const colors = ['blue', 'green', 'pink', 'yellow'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    });
+    ```
+    ````
+    ![](img/extended-markdown-syntax/06_code_block_line_highlight_simple.png)
+  </TabItem>
+  <TabItem value="コード内で指定" label="コード内で指定">
+    `[!code highlight]`をコメントとして記述することでもハイライトできます。同様に、1行目と、3から5行目がハイライトされます。
+    ````plaintext
+    ```js
+    // [!code highlight]
+    document.body.addEventListener('click', () => {
+      const colors = ['blue', 'green', 'pink', 'yellow'];
+      // [!code highlight:3]
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    });
+    ```
+    ````
+    ![](img/extended-markdown-syntax/06_code_block_line_highlight_inline.png)
+  </TabItem>
+</Tabs>
+
+### 差分のハイライト
+
+コードブロックの特定の行を差分表示のようにハイライトしたい場合は`[!code --]`や`[!code ++]`をコメントとして書きます。言語名は必須です。
+
+<Tabs>
+  <TabItem value="シンプルな例" label="シンプルな例" default>
+    ````plaintext
+    ```js title="color.js"
+    document.body.addEventListener('click', () => {
+      // [!code --]
+      const colors = ['blue', 'green', 'pink', 'yellow'];
+      // [!code ++:7]
+      const colors = [
+        'blue', 
+        'green', 
+        'pink', 
+        'yellow', 
+        'red'
+      ];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    });
+    ```
+    ````
+    ![](img/extended-markdown-syntax/06_code_block_diff_01.png)
+  </TabItem>
+  <TabItem value="行表示と組み合わせた例" label="行表示と組み合わせた例">
+    ````plaintext
+    ```js title="color.js" showLineNumbers
+    document.body.addEventListener('click', () => {
+      // [!code --]
+      const colors = ['blue', 'green', 'pink', 'yellow'];
+      // [!code ++:7]
+      const colors = [
+        'blue', 
+        'green', 
+        'pink', 
+        'yellow', 
+        'red'
+      ];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    });
+    ```
+    ````
+    ![](img/extended-markdown-syntax/06_code_block_diff_02.png)
+  </TabItem>
+</Tabs>
+
+### 単語のハイライト
+
+コードブロックの特定の単語をハイライト表示できます。
+
+````plaintext
+```js title="color.js" /colors/
 document.body.addEventListener('click', () => {
   const colors = ['blue', 'green', 'pink', 'yellow'];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -185,7 +327,7 @@ document.body.addEventListener('click', () => {
 ```
 ````
 
-![](img/extended-markdown-syntax/06_code_block.webp)
+![](img/extended-markdown-syntax/07_word_highlight.png)
 
 ## Mermaid
 
