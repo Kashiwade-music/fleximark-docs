@@ -23,7 +23,7 @@ This command starts a local development server and opens up a browser window. Mo
 prepare ffmpeg
 
 ```bash
-python md_img_convert.py --source ./docs --backup ./backup_images
+python md_img_convert.py --source ./i18n/ja/docusaurus-plugin-content-docs/current --backup ./backup_images
 ```
 
 ## Build

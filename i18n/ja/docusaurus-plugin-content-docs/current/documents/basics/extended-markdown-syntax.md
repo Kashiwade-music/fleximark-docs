@@ -25,7 +25,7 @@ e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}
 $$
 ```
 
-![](img/extended-markdown-syntax/00_katex.png)
+![](img/extended-markdown-syntax/00_katex.webp)
 
 ## 付箋（Admonition/Alert）記法
 
@@ -181,7 +181,7 @@ document.body.addEventListener('click', () => {
 });
 ```
 ````
-![](img/extended-markdown-syntax/06_code_block_simple.png)
+![](img/extended-markdown-syntax/06_code_block_simple.webp)
 
 ### タイトル
 
@@ -196,7 +196,7 @@ document.body.addEventListener('click', () => {
 });
 ```
 ````
-![](img/extended-markdown-syntax/06_code_block_title.png)
+![](img/extended-markdown-syntax/06_code_block_title.webp)
 
 ### 行番号
 
@@ -213,7 +213,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_line_number_01.png)
+    ![](img/extended-markdown-syntax/06_code_block_line_number_01.webp)
   </TabItem>
   <TabItem value="途中の番号から" label="途中の番号から">
     ````plaintext
@@ -225,7 +225,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_line_number_02.png)
+    ![](img/extended-markdown-syntax/06_code_block_line_number_02.webp)
   </TabItem>
 </Tabs>
 
@@ -245,7 +245,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_line_highlight_simple.png)
+    ![](img/extended-markdown-syntax/06_code_block_line_highlight_simple.webp)
   </TabItem>
   <TabItem value="コード内で指定" label="コード内で指定">
     `[!code highlight]`をコメントとして記述することでもハイライトできます。同様に、1行目と、3から5行目がハイライトされます。
@@ -260,7 +260,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_line_highlight_inline.png)
+    ![](img/extended-markdown-syntax/06_code_block_line_highlight_inline.webp)
   </TabItem>
 </Tabs>
 
@@ -288,7 +288,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_diff_01.png)
+    ![](img/extended-markdown-syntax/06_code_block_diff_01.webp)
   </TabItem>
   <TabItem value="行表示と組み合わせた例" label="行表示と組み合わせた例">
     ````plaintext
@@ -309,7 +309,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_diff_02.png)
+    ![](img/extended-markdown-syntax/06_code_block_diff_02.webp)
   </TabItem>
 </Tabs>
 
@@ -327,7 +327,7 @@ document.body.addEventListener('click', () => {
 ```
 ````
 
-![](img/extended-markdown-syntax/07_word_highlight.png)
+![](img/extended-markdown-syntax/07_word_highlight.webp)
 
 ## Mermaid
 
