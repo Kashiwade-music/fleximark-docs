@@ -25,7 +25,7 @@ e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}
 $$
 ```
 
-![](img/extended-markdown-syntax/00_katex.webp)
+![](img/extended-markdown-syntax/00_00_katex.webp)
 
 ## 付箋（Admonition/Alert）記法
 
@@ -57,7 +57,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 :::
 ```
 
-![](img/extended-markdown-syntax/00_admonition_alert.webp)
+![](img/extended-markdown-syntax/01_00_admonition_alert.webp)
 
 付箋（Admonition/Alert）にカスタムタイトルをつけることもできます。タイトルには各種Markdown記法を使うことができます。
 
@@ -87,13 +87,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 :::
 ```
 
-![](img/extended-markdown-syntax/01_admonition_alert_custom_title.webp)
+![](img/extended-markdown-syntax/01_01_admonition_alert_custom_title.webp)
 
 :::tip
 
 付箋（Admonition/Alert）はネストもできますが、`:`の数を変えることでペアを作る書き方がおすすめです。
 
-![](img/extended-markdown-syntax/02_admonition_alert_nested.webp)
+![](img/extended-markdown-syntax/01_02_admonition_alert_nested.webp)
 
 :::
 
@@ -119,7 +119,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ::::
 ```
 
-![](img/extended-markdown-syntax/03_tab.webp)
+![](img/extended-markdown-syntax/02_00_tab.webp)
 
 ## 折り畳み
 
@@ -143,7 +143,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 :::
 ```
 
-![](img/extended-markdown-syntax/04_details.webp)
+![](img/extended-markdown-syntax/03_00_details.webp)
 
 
 ## YouTube iframe
@@ -156,7 +156,7 @@ https://youtu.be/G1W3aroArqY
 Lorem https://youtu.be/G1W3aroArqY dolor sit amet, consectetur adipiscing elit.
 ```
 
-![](img/extended-markdown-syntax/05_youtube.webp)
+![](img/extended-markdown-syntax/04_00_youtube.webp)
 
 :::warning
 
@@ -181,7 +181,7 @@ document.body.addEventListener('click', () => {
 });
 ```
 ````
-![](img/extended-markdown-syntax/06_code_block_simple.webp)
+![](img/extended-markdown-syntax/05_00_code_block_simple.webp)
 
 ### タイトル
 
@@ -196,7 +196,7 @@ document.body.addEventListener('click', () => {
 });
 ```
 ````
-![](img/extended-markdown-syntax/06_code_block_title.webp)
+![](img/extended-markdown-syntax/05_01_code_block_title.webp)
 
 ### 行番号
 
@@ -213,7 +213,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_line_number_01.webp)
+    ![](img/extended-markdown-syntax/05_02_code_block_line_number_01.webp)
   </TabItem>
   <TabItem value="途中の番号から" label="途中の番号から">
     ````plaintext
@@ -225,7 +225,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_line_number_02.webp)
+    ![](img/extended-markdown-syntax/05_03_code_block_line_number_02.webp)
   </TabItem>
 </Tabs>
 
@@ -245,7 +245,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_line_highlight_simple.webp)
+    ![](img/extended-markdown-syntax/05_04_code_block_line_highlight_simple.webp)
   </TabItem>
   <TabItem value="コード内で指定" label="コード内で指定">
     `[!code highlight]`をコメントとして記述することでもハイライトできます。同様に、1行目と、3から5行目がハイライトされます。
@@ -260,7 +260,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_line_highlight_inline.webp)
+    ![](img/extended-markdown-syntax/05_05_code_block_line_highlight_inline.webp)
   </TabItem>
 </Tabs>
 
@@ -288,7 +288,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_diff_01.webp)
+    ![](img/extended-markdown-syntax/05_06_code_block_diff_01.webp)
   </TabItem>
   <TabItem value="行表示と組み合わせた例" label="行表示と組み合わせた例">
     ````plaintext
@@ -309,7 +309,7 @@ document.body.addEventListener('click', () => {
     });
     ```
     ````
-    ![](img/extended-markdown-syntax/06_code_block_diff_02.webp)
+    ![](img/extended-markdown-syntax/05_07_code_block_diff_02.webp)
   </TabItem>
 </Tabs>
 
@@ -327,7 +327,7 @@ document.body.addEventListener('click', () => {
 ```
 ````
 
-![](img/extended-markdown-syntax/07_word_highlight.webp)
+![](img/extended-markdown-syntax/05_08_word_highlight.webp)
 
 ## Mermaid
 
@@ -343,7 +343,7 @@ sequenceDiagram
 ```
 ````
 
-![](img/extended-markdown-syntax/07_mermaid.webp)
+![](img/extended-markdown-syntax/06_00_mermaid.webp)
 
 :::tip
 
@@ -392,10 +392,10 @@ F,2A,2C2 | F,2C2A2 | B,2D2F2- | FAFEB,2 :|
 ```
 ````
 
-![](img/extended-markdown-syntax/08_abc.webp)
+![](img/extended-markdown-syntax/07_00_abc.webp)
 
 ABCのコードブロック内でバックスラッシュ（`\`）を入力することで、ABC記譜法のスニペットが表示されます。
-![](img/extended-markdown-syntax/09_abc_snippet.webp)
+![](img/extended-markdown-syntax/07_01_abc_snippet.webp)
 
 また、ABCのコードブロック内でエクスクラメーションマーク（`!`）を入力することで、各種記号のスニペットが表示されます。
-![](img/extended-markdown-syntax/10_abc_mark.webp)
+![](img/extended-markdown-syntax/07_02_abc_mark.webp)
